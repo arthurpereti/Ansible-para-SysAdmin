@@ -1,0 +1,11 @@
+---
+- name: Testando variaveis
+  hosts: linux
+  vars:
+      message: "Mensagem de teste através de variável"
+  gather_facts: false
+  tasks:
+    - name: DEBUG
+      ansible.builtin.debug:
+        msg: "{{ message }}"
+...

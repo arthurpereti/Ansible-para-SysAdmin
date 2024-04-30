@@ -1,0 +1,9 @@
+---
+- name: Ansible Facts Vars
+  hosts: linux
+  tasks:
+    - name: DEBUG | Ansible Facts
+      ansible.builtin.debug:
+        msg: "{{ ansible_default_ipv4.macaddress  }}"
+...
+[root@S01OL9AUTOMATION01 playbooks]#
