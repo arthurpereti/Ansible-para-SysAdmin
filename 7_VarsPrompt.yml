@@ -1,6 +1,6 @@
 ---
 - name: Ansible Prompt | Creating user on linux
-  host: linux
+  hosts: linux
   vars_prompt:
     - name: username
       prompt: What is your username ?
@@ -10,7 +10,6 @@
       private: true # opcional - default - true
       encrypt: "md5_crypt" # Required passlib
       confirm: yes # vai pedir para repetir a senha
-      salt size: 7 # dados randômicos no hash
     - name: shell
       prompt: What is your Shell ? 
       private: false
